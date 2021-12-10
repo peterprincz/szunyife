@@ -1,0 +1,242 @@
+{
+    "categories": [
+        {
+        "id": 1,
+        "title": "Csapolt sörök"
+       },
+       {
+        "id": 2,
+        "title": "Dobozos sörök"
+       },
+       {
+        "id": 3,
+        "title": "Borok"
+       },
+       {
+        "id": 4,
+        "title": "Rövid italok"
+       },
+       {
+        "id": 5,
+        "title": "Üditők"
+       }
+    ],
+    "drinks": [
+        {
+            "title": "Stella Artois",
+            "description": "Világos sör",
+            "price": "370 Ft",
+            "categoryId": 1
+        },
+        {
+            "title": "Borsodi világos",
+            "description": "Világos sör",
+            "price": "370 Ft",
+            "categoryId": 1
+        },
+        {
+            "title": "Borsodi IPA",
+            "description": "IPA sör",
+            "price": "420 Ft",
+            "categoryId": 1
+        },
+        {
+            "title": "Staropramen",
+            "description": "világos sör",
+            "price": "420 Ft",
+            "categoryId": 1
+        },
+        {
+            "title": "Miller",
+            "description": "",
+            "price": "510 Ft",
+            "categoryId": 2
+        },
+        {
+            "title": "Borsody Hoppy",
+            "description": "",
+            "price": "410 Ft",
+            "categoryId": 2
+        },
+        {
+            "title": "Borsody IPA",
+            "description": "",
+            "price": "410 Ft",
+            "categoryId": 2
+        },
+        {
+            "title": "Staropramen",
+            "description": "világos sör",
+            "price": "510 Ft",
+            "categoryId": 2
+        },
+        {
+            "title": "Beck's",
+            "description": "világos sör",
+            "price": "510 Ft",
+            "categoryId": 2
+        },
+        {
+            "title": "Varga borok",
+            "description": "",
+            "price": "180 Ft / dl",
+            "categoryId": 3
+        },
+        {
+            "title": "Maci Fröccs",
+            "description": "Szörp, szénsavas ásványvíz és bor",
+            "price": "410 Ft",
+            "categoryId": 3
+        },
+        {
+            "title": "Jameson",
+            "description": "",
+            "price": "0,2 dl 400 Ft 0,4 dl 750 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Jack Daniels",
+            "description": "",
+            "price": "0,2 dl 400 Ft 0,4 dl 750 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Jim Bean",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Ballentines",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Johnnie Walker",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Finlandia",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Royal",
+            "description": "",
+            "price": "0,2 dl 300 Ft 0,4 dl 600 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Bacardi",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Captain Morgan",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Pálinka",
+            "description": "",
+            "price": "0,2 dl 400 Ft 0,4 dl 750 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Unicum",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "JagerMeister",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Absinte",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Dry Gin",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Tequila",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Ouzo",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Malibu",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Baileys",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Martini",
+            "description": "",
+            "price": "1 dl 750 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Saint Hubertus",
+            "description": "",
+            "price": "0,2 dl 350 Ft 0,4 dl 650 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Tátratea",
+            "description": "",
+            "price": "0,2 dl 500 Ft 0,4 dl 950 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Metaxa 7*",
+            "description": "",
+            "price": "0,2 dl 400 Ft 0,4 dl 750 Ft",
+            "categoryId": 4
+        },
+        {
+            "title": "Üveges üditő",
+            "description": "",
+            "price": "350 Ft",
+            "categoryId": 5
+        },
+        {
+            "title": "Kávé",
+            "description": "",
+            "price": "400 Ft",
+            "categoryId": 5
+        },
+        {
+            "title": "Tea",
+            "description": "",
+            "price": "400 Ft",
+            "categoryId": 5
+        }
+    ]
+}

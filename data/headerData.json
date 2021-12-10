@@ -1,0 +1,31 @@
+{
+    "drawerItems": [
+        {
+            "id": 1,
+            "title": "Cím",
+            "items": [
+                "Vác, Sziréna köz 8"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Elérhetőség",
+            "items": [
+                "(06) 30 123 4567",
+                "szunyog@email.com"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Nyitva tartás",
+            "items": [
+                "Hétfő 16:00 - 01:00",
+                "Kedd 16:00 - 01:00",
+                "Szerda 16:00 - 01:00",
+                "Csütörtök 16:00 - 01:00",
+                "Péntek 16:00 - 04:00",
+                "Szombat 16:00 - 04:00"
+            ]
+        }
+    ]
+}

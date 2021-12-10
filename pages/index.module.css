@@ -1,0 +1,11 @@
+@media (max-width: 900px) {
+    .flex-response-column {
+        flex-direction: column;
+        padding-bottom: 15%;
+    }
+    .responsiveCard {
+        width: 80% !important
+    }
+    
+
+}

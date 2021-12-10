@@ -1,0 +1,33 @@
+{
+  "name": "szunyi-pub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^4.5.1",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "next": "^10.0.0",
+    "node-fetch": "^3.0.0",
+    "postcss": "^8.3.9",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-grid-gallery": "^0.5.5",
+    "react-horizontal-slider": "^1.1.1",
+    "react-images": "^1.2.0-beta.7",
+    "react-photo-gallery": "^8.0.0",
+    "socket.io": "^4.2.0",
+    "socket.io-client": "^4.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7"
+  }
+}

@@ -1,0 +1,5 @@
+@media (maxWidth: 1200px) {
+    .flex-response-column {
+        flex-direction: "column"
+}
+}
