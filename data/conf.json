@@ -1,7 +1,7 @@
 {
     "server": {
-        "protocol": "http",
-        "domain": "localhost",
-        "port": 4000
+        "protocol": "https",
+        "domain": "szunyibe.herokuapp.com",
+        "port": 443
     }
 }
