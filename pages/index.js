@@ -36,8 +36,6 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
       alignItems: "center",
     },
     quoteContainer: {
-      backgroundColor: "white",
-      color: "black",
       paddingTop: "5%",
       paddingBottom: "5%",
       textAlign: "center"

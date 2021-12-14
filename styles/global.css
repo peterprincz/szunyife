@@ -14,6 +14,14 @@ body {
     font-size: 1em;
     font-family: 'Poiret One', cursive;
 }
+.MuiButton-containedPrimary {
+    color: white m !important;
+    background-color: #ff0000a6 !important;
+}
+.MuiButton-contained.Mui-disabled {
+    color: rgba(255, 255, 255, 0.63) !important;
+    background-color: #ff8282a6 !important;
+}
 .MuiAppBar-colorPrimary {
     color:black !important;
     background-color: white !important;
@@ -22,3 +30,37 @@ body {
     font-family: 'Poiret One' !important;
 }
 
+.MuiCard-root, .MuiPaper-root {
+    color: white !important;
+    background-color: #1a1a1a !important;
+    border: 1px solid #606060 !important;
+}
+.MuiInputBase-input {
+    color:white !important
+}
+.MuiFormLabel-root {
+    color:white !important; 
+}
+.MuiFormLabel-root.Mui-disabled  {
+    color:rgb(255 255 255 / 61%) !important; 
+}
+.MuiInput-underline:after {
+    border-bottom-color: 'green' !important;
+}
+.MuiTypography-colorTextSecondary {
+    color:#ffffffd1 !important
+}
+/*
+.MuiInput-input {
+    color:white !important; 
+    opacity:1 !important;
+}
+.MuiFormLabel-filled {
+    color:white !important; 
+    opacity:1 !important;
+}
+.MuiFormLabel-root {
+    color:white !important; 
+    opacity:1 !important;
+}
+*/

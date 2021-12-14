@@ -23,3 +23,9 @@ export function getConf() {
   const config = readJson("conf");
   return config;
 }
+
+
+export function getPosts() {
+  const posts = readJson("postsData");
+  return posts;
+}

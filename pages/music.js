@@ -86,11 +86,15 @@ export default function MusicClient(props) {
             width: "100%"
         },
         songTitle: {
-            padding: 10
+            padding: 10,
+            color:'white'
         },
         songTime: {
             color: 'white',
             textShadow: "rgb(63 81 181) 2px 2px"
+        },
+        whiteText: {
+            color:'white'
         }
     };
 
@@ -233,14 +237,14 @@ export default function MusicClient(props) {
                         </CardMedia>
                         <CardContent>
                             <TextField style={classes.input} disabled={!pin.accepted} label="Youtube link" value={inputField.value} onChange={handleInputChange} />
-                            <Button onClick={() => sendSong()} variant="contained" color="primary" style={classes.sendSongButton}>Beküldés</Button>
+                            <Button disabled={!pin.accepted} onClick={() => sendSong()} variant="contained" color="primary" style={classes.sendSongButton}>Beküldés</Button>
                             <Divider />
                             <div style={classes.buttonContainer}>
-                                <Button onClick={() => changeVolume(5)} variant="contained" color="primary">+</Button>
+                                <Button disabled={!pin.accepted} onClick={() => changeVolume(5)} variant="contained" color="primary">+</Button>
                                 <Typography style={classes.songTitle} align="center" variant="h6">
                                     Hangerő
                                 </Typography>
-                                <Button onClick={() => changeVolume(-5)} variant="contained" color="secondary">-</Button>
+                                <Button disabled={!pin.accepted} onClick={() => changeVolume(-5)} variant="contained" color="primary">-</Button>
                             </div>
                             <Divider />
                             <TextField style={classes.speechInput} disabled={!pin.accepted} label="Szöveg" onChange={handlespeechInputChange} value={speechInputField}/>
@@ -252,7 +256,7 @@ export default function MusicClient(props) {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <Typography className={classes.heading}>PIN</Typography>
+                                <Typography>PIN Megadása</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <TextField style={classes.input} type="number" error={!pin.accepted} label="PIN" onChange={handlePinChange} />

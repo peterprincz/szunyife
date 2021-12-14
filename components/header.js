@@ -60,6 +60,9 @@ export default function Header({title}) {
                 "Szombat 16:00 - 04:00",
             ]
         },
+        {
+            id:4, title: "Zenegép", items:[], url: "/music"
+        }
     ]
 
     const menus = [
@@ -72,8 +75,12 @@ export default function Header({title}) {
             url: "/drinklist"
         },
         {
-            title: "Zenegép",
-            url: "/music"
+            title: "Hírek",
+            url: "/posts"
+        },
+        {
+            title: "Galléria",
+            url: "/gallery"
         }
     ]
 
@@ -82,11 +89,14 @@ export default function Header({title}) {
         case "Kezdőlap":
             active = 0;
             break;
-        case "Rólunk":
+        case "Itallap":
             active = 1;
             break;
-        case "zenegép":
+        case "Hírek":
             active = 2;
+            break;
+        case "Galléria":
+            active = 3;
             break;
     }
     const toggleDrawer = (open) => {
@@ -107,7 +117,9 @@ export default function Header({title}) {
                                 return (
                                     <React.Fragment key={item.id}>
                                         <ListItem button>
-                                            <ListItemText primary={item.title} />
+                                            <ListItemText primary={item.title} onClick={() => {
+                                                if(item.url){navigate(item.url)}}
+                                            }/>
                                         </ListItem>
                                         <Divider style={{ backgroundColor: "rgb(255 255 255 / 12%)" }} />
                                         {item.items.map((x => {
@@ -124,7 +136,7 @@ export default function Header({title}) {
                     </div>
                 </Drawer>
                 <Toolbar style={{ justifyContent: "space-between" }}>
-                    <Tabs value={active}>
+                    <Tabs value={active} scrollButtons="auto">
                         {menus.map((menu, i) => {
                             return (
                                 <Tab key={i} value={i} label={menu.title} onClick={() => navigate(menu.url)} />
