@@ -133,7 +133,7 @@ export default function Header({title}) {
                     </div>
                 </Drawer>
                 <Toolbar style={{ justifyContent: "space-between" }}>
-                    <Tabs value={active} scrollButtons="auto">
+                    <Tabs value={active} scrollButtons="on" variant="scrollable">
                         {menus.map((menu, i) => {
                             return (
                                 <Tab key={i} value={i} label={menu.title} onClick={() => navigate(menu.url)} />
