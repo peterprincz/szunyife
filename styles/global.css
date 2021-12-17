@@ -54,20 +54,14 @@ body {
 .MuiTypography-colorTextSecondary {
     color:#ffffffd1 !important
 }
-/*
-.MuiInput-input {
-    color:white !important; 
-    opacity:1 !important;
+
+.MuiTabScrollButton-root {
+    width: 10px !important;
 }
-.MuiFormLabel-filled {
-    color:white !important; 
-    opacity:1 !important;
+.MuiToolbar-gutters {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
 }
-.MuiFormLabel-root {
-    color:white !important; 
-    opacity:1 !important;
-}
-*/
   
   .embla__viewport {
     overflow: hidden;

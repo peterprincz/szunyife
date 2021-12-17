@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from './header'
 
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, marginTopDisabled }) {
   return (
     <div>
       <Head>
@@ -16,7 +16,7 @@ export default function Layout({ children, title }) {
       </Head>
       <Header title={title}/>
       <main>
-        <div style={{marginTop: 100}} >
+        <div style={{marginTop: marginTopDisabled ? 0: 100}} >
           {children}
         </div>
       </main>

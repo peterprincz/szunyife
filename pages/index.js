@@ -7,8 +7,7 @@ import CardImage from '../components/cardImage';
 import BackgroundVideo from '../components/backgroundVideo';
 import Carousel from '../components/carousel';
 import { getIndexData } from '../util/localDataReader'
-
-import styles from './index.module.css'
+import Grid from '@material-ui/core/Grid';
 
 
 export async function getStaticProps() {
@@ -22,35 +21,18 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
 
   const classes = {
     titleContainer: {
-      marginTop: "5%",
       fontFamily: "Raleway,sans-serif"
     },
-    subTitleContainer: {
-      marginTop: "5%"
+    sectionDivider: {
+      marginTop: "8%",
     },
-    cardsContainer: {
-      marginTop: "5%",
-      width: "100%",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    quoteContainer: {
-      paddingTop: "5%",
-      paddingBottom: "5%",
-      textAlign: "center"
-    },
-    quotes: {
-      display: "flex",
-    },
-    imageContainer: {
-      marginTop: "5%",
-      width: "100%"
+    photoContainer: {
+      padding: 0
     }
   };
 
   return (
-    <Layout title="Kezdőlap">
+    <Layout title="Kezdőlap" marginTopDisabled>
       <BackgroundVideo
         blur={2}
         videoSource={video.videoSource} >
@@ -61,49 +43,51 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
           {video.subTitle}
         </Typography>
       </BackgroundVideo>
-      <Container fixed>
+      <Container fixed style={classes.sectionDivider}>
         <div style={classes.titleContainer}>
           <Typography align="center" variant="h3">
             {introduction.title}
           </Typography>
         </div>
-        <div style={classes.subTitleContainer}>
+        <div style={classes.sectionDivider}>
           <Typography align="center" variant="h3">
             {introduction.subTitle}
           </Typography>
         </div>
       </Container>
-
-      <div style={classes.cardsContainer} className={styles['flex-response-column']}>
-        {cards.map(card => {
-          return (
-            <CardImage key={card.id}
-              className={styles['responsiveCard']}
-              image={card.image}
-              title={card.title}
-              textTitle={card.textTitle}
-              text={card.text}>
-            </CardImage>
-          )
-        })}
-
-      </div>
-
-      <div style={classes.quoteContainer}>
-          <Typography align="center" variant="h3">
-            {quotePart.text}
-          </Typography>
-        <div style={classes.quotes} className={styles['flex-response-column']}>
-          {quotePart.quotes.map(quote => {
+      <Container fixed style={classes.sectionDivider}>
+        <Grid container>
+          {cards.map(card => {
             return (
-              <Quote key={quote.id} text={quote.text} author={quote.author} />
+              <Grid item key={card.id} md={4} sm={12} style={{width:"100%", padding: 20}}>
+                <CardImage 
+                  image={card.image}
+                  title={card.title}
+                  textTitle={card.textTitle}
+                  text={card.text}>
+                </CardImage>
+              </Grid>
             )
           })}
-        </div>
-      </div>
-      <div style={classes.imageContainer}>
+        </Grid>
+      </Container>
+      <Container fixed style={classes.sectionDivider}>
+        <Typography align="center" variant="h3">
+          {quotePart.text}
+        </Typography>
+        <Grid container>
+          {quotePart.quotes.map(quote => {
+            return (
+              <Grid  key={quote.id}  item md={4} sm={12} style={{width:"100%", padding: 20}}>
+                <Quote text={quote.text} author={quote.author} />
+              </Grid>
+            )
+          })}
+        </Grid>
+      </Container>
+      <Container style={{...classes.sectionDivider, ...classes.photoContainer}}>
         <Carousel photos={photos} />
-      </div>
+      </Container>
     </Layout>
   )
 }

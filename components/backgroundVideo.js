@@ -7,6 +7,7 @@ const BackgroundVideo = ({ videoSource, children, blur }) => {
   const classes = {
     overLay: {
       position: "absolute",
+      
       top: "10%",
       width: "100%",
       left: 0,

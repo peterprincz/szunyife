@@ -12,7 +12,6 @@ export default function CardImage(props) {
 
     const classes = {
         card: {
-            margin: "2%",
             height: "100%",
             width:"100%",
             textAlign:'center'

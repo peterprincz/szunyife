@@ -1,12 +1,11 @@
 import React from 'react';
 import Layout from "../components/layout";
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-
 import { getPosts } from '../util/localDataReader'
 
 export async function getStaticProps() {
@@ -19,16 +18,6 @@ export async function getStaticProps() {
 export default function Posts(props) {
 
     const classes = {
-        container: {
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center"
-        },
-        postContainer: {
-            margin: "2%",
-            width: "80%"
-        },
         postMedia: {
             height: 250
         },
@@ -38,35 +27,32 @@ export default function Posts(props) {
             justifyContent: "space-between",
             marginBottom: 20
         },
-        postTitle: {
-            fontSize: 24,
-            fontWeight: "bold"
-        },
         postBottom: {
-            display:"flex",
-            justifyContent: "flex-end"
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "flex-end"
         }
     }
 
     return (
         <Layout title="Hírek">
-            <div style={classes.container}>
-                <Typography variant="h1">
+            <Container fixed>
+                <Typography variant="h1" align="center">
                     HÍREK
                 </Typography>
-                {props.posts.map(post => {
-                    return (
-                        <div key={post.id} style={classes.postContainer}>
-                            <Card>
-                                <CardActionArea>
+                <Grid container justifyContent="center">
+                    {props.posts.map(post => {
+                        return (
+                            <Grid xs={12} item key={post.id} style={{ marginBottom: 50}}>
+                                <Card style={{ height: "100%" }}>
                                     <CardMedia
                                         style={classes.postMedia}
                                         image={post.image.src}
-                                        alt="green iguana"
+                                        alt="post media"
                                     />
                                     <CardContent style={classes.cardContent}>
                                         <div style={classes.postHeader}>
-                                            <Typography align="center" variant="h6">
+                                            <Typography align="center" variant="h6" style={{ width: "100%" }}>
                                                 {post.title}
                                             </Typography>
                                         </div>
@@ -81,12 +67,13 @@ export default function Posts(props) {
                                             </Typography>
                                         </div>
                                     </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
-                    )
-                })}
-            </div>
+                                </Card>
+                            </Grid>
+                        )
+                    })}
+                </Grid>
+
+            </Container>
         </Layout >
     )
 
