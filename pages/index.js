@@ -5,14 +5,17 @@ import React from 'react';
 import Quote from '../components/quote'
 import CardImage from '../components/cardImage';
 import BackgroundVideo from '../components/backgroundVideo';
-import BasicImageList from '../components/imageList';
+import Carousel from '../components/carousel';
 import { getIndexData } from '../util/localDataReader'
+
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
 import styles from './index.module.css'
 
 
 export async function getStaticProps() {
-  
+
   return {
     props: getIndexData()
   }
@@ -44,6 +47,7 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
       display: "flex",
     },
     imageContainer: {
+      marginTop: "5%",
       width: "100%"
     }
   };
@@ -51,10 +55,13 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
 
   });
 
-  photos.sort( () => .5 - Math.random() );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()])
+
+  photos.sort(() => .5 - Math.random());
   photos = photos.slice(0, 8)
 
-
+  const SLIDE_COUNT = 5;
+  const slides = Array.from(Array(SLIDE_COUNT).keys());
   return (
     <Layout title="Kezdőlap">
       <BackgroundVideo
@@ -108,7 +115,7 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
         </div>
       </div>
       <div style={classes.imageContainer}>
-        <BasicImageList photos={photos} />
+          <Carousel photos={photos}/>
       </div>
     </Layout>
   )

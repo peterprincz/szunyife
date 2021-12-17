@@ -4,6 +4,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Image from 'next/image'
+
 
 
 export default function CardImage(props) {
@@ -24,9 +26,10 @@ export default function CardImage(props) {
             <CardActionArea>
                 <CardMedia
                     style={classes.cardImage}
-                    image={props.image}
                     title={props.title}
-                />
+                    image={props.image}
+                >
+                </CardMedia>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {props.textTitle}

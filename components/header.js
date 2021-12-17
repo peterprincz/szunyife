@@ -18,9 +18,6 @@ export default function Header({title}) {
         root: {
             flexGrow: 1,
         },
-        header: {
-            backgroundColor: "white"
-        },
         menuButton: {
             marginRight: 2
         },
@@ -109,7 +106,7 @@ export default function Header({title}) {
 
     return (
         <div style={classes.root}>
-            <AppBar position="relative" style={classes.header}>
+            <AppBar position="fixed">
                 <Drawer anchor={"right"} open={!state.drawerClosed} onClose={() => toggleDrawer(true)}>
                     <div style={classes.list}>
                         <List>

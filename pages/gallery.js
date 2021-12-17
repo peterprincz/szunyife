@@ -1,38 +1,60 @@
 import Layout, { siteTitle } from '../components/layout'
 import React from 'react';
-import { getIndexData } from '../util/localDataReader'
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-
-import styles from './index.module.css'
+import { getAlbums } from '../util/localDataReader'
+import Album from '../components/album'
 
 
 export async function getStaticProps() {
 
     return {
-        props: getIndexData()
+        props: getAlbums()
     }
 }
 
 export default function Gallery(props) {
     const classes = {
+        container: {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+        },
+        albumContainer: {
+            marginBottom: "5%",
+            marginLeft: 5,
+            marginRight: 5,
+            minWidth: 300
+        },
+        galleryContainer: {
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+
+            gap: 10,
+        }
     };
     const [state, setState] = React.useState({
 
     });
 
+    const albums = [props.albums[0], props.albums[0]]
+    albums.forEach((album, i) => album.id = i);
+
     return (
         <Layout title="Galléria">
-            <ImageList gap={1} className={classes.imageList}>
-                {props.photos.map((item) => (
-                    <ImageListItem key={item.src}>
-                        <img src={item.src} />
-                    </ImageListItem>
-                ))}
-            </ImageList>
+            <div style={classes.container}>
+                <h1>Galléria</h1>
+                <div style={classes.galleryContainer}>
+                    {albums.map(album => {
+                        return (
+                            <div style={classes.albumContainer} key={album.id}>
+                                <Album albumTitle={album.title} albumDesc={album.desc} previewPhoto={album.photos[0]} photos={album.photos} />
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </Layout>
     )
 }

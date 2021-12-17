@@ -29,3 +29,9 @@ export function getPosts() {
   const posts = readJson("postsData");
   return posts;
 }
+
+
+export function getAlbums() {
+  const posts = readJson("albumData");
+  return posts;
+}
