@@ -72,9 +72,7 @@ export default function Posts(props) {
                         )
                     })}
                 </Grid>
-
             </Container>
         </Layout >
     )
-
 }
