@@ -42,10 +42,10 @@ export default function Album({ albumTitle, albumDesc, previewPhoto, photos }) {
                     >
                     </CardMedia>
                     <CardContent>
-                        <Typography align='center' gutterBottom variant="h5" component="h2">
+                        <Typography align='center' gutterBottom variant="h3">
                             {albumTitle}
                         </Typography>
-                        {albumDesc ? <Typography variant="body2" color="textSecondary" component="p">
+                        {albumDesc ? <Typography variant="body1">
                             {albumDesc}
                         </Typography> 
                         : 

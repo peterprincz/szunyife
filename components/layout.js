@@ -16,7 +16,7 @@ export default function Layout({ children, title }) {
       </Head>
       <Header title={title}/>
       <main>
-        <div style={{marginTop: 64}} >
+        <div style={{marginTop: 100}} >
           {children}
         </div>
       </main>

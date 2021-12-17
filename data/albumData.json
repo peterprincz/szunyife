@@ -1,114 +1,67 @@
 {
     "albums": [
         {
-            "title":"title",
-            "desc": "desc",
+            "title":"Sörpong",
+            "desc": "Sörpong bajnokok győzelmi képei",
             "photos": [
                 {
-                    "src": "https://i.imgur.com/t4P7rCW.jpg"
+                    "src": "https://imgur.com/eoRYni2.jpg"
                 },
                 {
-                    "src": "https://i.imgur.com/ZqdueGr.jpg"
+                    "src": "https://imgur.com/b8YlGfw.jpg"
                 },
                 {
-                    "src": "https://i.imgur.com/abGNEbW.jpg"
+                    "src": "https://imgur.com/K6NSPyW.jpg"
                 },
                 {
-                    "src": "https://i.imgur.com/uBTlMoO.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/vPvMqVd.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/aMQEdxa.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/zE2Hxed.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/2mGGCBa.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/k2jKwBj.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/yuUujyb.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/mhrmqcr.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/tFinkoi.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/sSwEGma.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/alXDaOw.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/xzIiqKc.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/d0drRGQ.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/duHKtxR.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/vzB4Oc1.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/Mt6L4zB.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/qI6je4w.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/NBzel9U.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/IufbMMe.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/zcd1KdA.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/83IbOmE.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/H3iuHv1.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/ydZlsfo.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/fzhkDa8.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/rCfSoUb.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/pYjzSBj.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/3goRAB4.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/CRSnSgr.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/mLOLsUO.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/jyDycFy.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/lJxlAnY.jpg"
-                },
-                {
-                    "src": "https://i.imgur.com/0twrDNa.jpg"
+                    "src": "https://imgur.com/cEjLcH1.jpg"
                 }
+            ]
+        },
+        {
+            "title":"Életképek",
+            "desc": "Random képek a kocsmai életből",
+            "photos": [
+                {
+                    "src": "https://imgur.com/Hp00XCi.jpg"
+                },
+                {
+                    "src": "https://imgur.com/vY75Tdt.jpg"
+                },
+                {
+                    "src": "https://imgur.com/VIYIjcQ.jpg"
+                },
+                {
+                    "src": "https://imgur.com/UauNgkP.jpg"
+                },
+                {
+                    "src": "https://imgur.com/neh0Vv7.jpg"
+                },
+                {
+                    "src": "https://imgur.com/neh0Vv7.jpg"
+                },
+                {
+                    "src": "https://imgur.com/hgcyCc0.jpg"
+                },
+                {
+                    "src": "https://imgur.com/r917uZO.jpg"
+                },
+                {
+                    "src": "https://imgur.com/nylclbF.jpg"
+                },
+                {
+                    "src": "https://imgur.com/ZK0t8Lc.jpg"
+                },
+                {
+                    "src": "https://imgur.com/kXgshWl.jpg"
+                },
+                {
+                    "src": "https://imgur.com/szWjOIO.jpg"
+                },
+                {
+                    "src": "https://imgur.com/7Zio2JF.jpg"
+                }
+
             ]
         }
     ]

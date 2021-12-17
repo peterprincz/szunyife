@@ -34,31 +34,26 @@ export default function Posts(props) {
         },
         postHeader: {
             borderBottom: "1px solid white",
-            display:"flex",
+            display: "flex",
             justifyContent: "space-between",
             marginBottom: 20
-        },
-        postBody: {
-            
-        },
-        postBottom: {
-            marginTop: 10,
-            textAlign:"right",
-            color: "#a1a1a1"
         },
         postTitle: {
             fontSize: 24,
             fontWeight: "bold"
         },
-        postDate: {
-            fontSize: 24,
+        postBottom: {
+            display:"flex",
+            justifyContent: "flex-end"
         }
     }
 
     return (
         <Layout title="Hírek">
             <div style={classes.container}>
-                <h1>Hírek</h1>
+                <Typography variant="h1">
+                    HÍREK
+                </Typography>
                 {props.posts.map(post => {
                     return (
                         <div key={post.id} style={classes.postContainer}>
@@ -71,13 +66,19 @@ export default function Posts(props) {
                                     />
                                     <CardContent style={classes.cardContent}>
                                         <div style={classes.postHeader}>
-                                            <span style={classes.postTitle}>{post.title}</span>
+                                            <Typography align="center" variant="h6">
+                                                {post.title}
+                                            </Typography>
                                         </div>
                                         <div style={classes.postBody}>
-                                            <p>{post.body}</p>
+                                            <Typography variant="body1">
+                                                {post.body}
+                                            </Typography>
                                         </div>
                                         <div style={classes.postBottom}>
-                                            {post.date}
+                                            <Typography variant="overline">
+                                                {post.date}
+                                            </Typography>
                                         </div>
                                     </CardContent>
                                 </CardActionArea>

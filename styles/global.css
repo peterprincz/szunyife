@@ -30,6 +30,10 @@ body {
     font-family: 'Poiret One' !important;
 }
 
+.MuiTypography-h1 {
+    font-family: 'Poiret One' !important;
+}
+
 .MuiCard-root, .MuiPaper-root {
     color: white !important;
     background-color: #1a1a1a !important;

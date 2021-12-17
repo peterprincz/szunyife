@@ -1,4 +1,4 @@
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
@@ -7,9 +7,6 @@ import CardImage from '../components/cardImage';
 import BackgroundVideo from '../components/backgroundVideo';
 import Carousel from '../components/carousel';
 import { getIndexData } from '../util/localDataReader'
-
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
 
 import styles from './index.module.css'
 
@@ -51,17 +48,7 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
       width: "100%"
     }
   };
-  const [state, setState] = React.useState({
 
-  });
-
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()])
-
-  photos.sort(() => .5 - Math.random());
-  photos = photos.slice(0, 8)
-
-  const SLIDE_COUNT = 5;
-  const slides = Array.from(Array(SLIDE_COUNT).keys());
   return (
     <Layout title="Kezdőlap">
       <BackgroundVideo
@@ -103,9 +90,9 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
       </div>
 
       <div style={classes.quoteContainer}>
-        <h1>
-          {quotePart.text}
-        </h1>
+          <Typography align="center" variant="h3">
+            {quotePart.text}
+          </Typography>
         <div style={classes.quotes} className={styles['flex-response-column']}>
           {quotePart.quotes.map(quote => {
             return (
@@ -115,7 +102,7 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
         </div>
       </div>
       <div style={classes.imageContainer}>
-          <Carousel photos={photos}/>
+        <Carousel photos={photos} />
       </div>
     </Layout>
   )

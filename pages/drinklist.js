@@ -46,62 +46,59 @@ export default function DrinkList(props) {
             textAlign: "center"
         },
         drinkListContainer: {
-            borderImage: "url(https://images.getbento.com/accounts/e8eee6aef7c2e8242e267a82a199ac35/media/images/19081ivory-borders.png) 70 70 round",
+            borderImage: "url(./drinkborder.png) 70 70 round",
             borderWidth: "30px",
             borderStyle: "solid",
-            width: "70%",
+            width: "80%",
             padding: "2%"
         },
         drinkContainer: {
             textAlign: "center",
-            marginTop: "20%"
-        },
-        drinkTitle: {
-            fontWeight: "bold"
-        },
-        drinkDescription: {
-
-        },
-        drinkPrice: {
-
+            marginTop: "5rem"
         }
     };
 
     const [activeCategory, setActiveCategory] = React.useState({ id: 1 });
 
-
+    props.drinks.forEach((x, i) => x.id = i);
     return (
         <Layout title="Itallap">
+            <Typography variant="h1" align="center">
+                ITALLAP
+            </Typography>
             <div style={classes.pageContainer}>
                 <div style={classes.buttonContainer}>
                     {props.categories.map(category => {
                         if (category.id == activeCategory.id) {
-                            return (<Button variant="outlined" style={classes.activeCategoryButton}>{category.title}</Button>)
+                            return (<Button key={category.id} variant="outlined" style={classes.activeCategoryButton}>{category.title}</Button>)
                         } else {
-                            return (<Button variant="outlined" onClick={() => setActiveCategory({ id: category.id })} style={classes.categoryButton}>{category.title}</Button>)
+                            return (<Button key={category.id} variant="outlined" onClick={() => setActiveCategory({ id: category.id })} style={classes.categoryButton}>{category.title}</Button>)
                         }
                     })}
                 </div>
                 <div style={classes.shortDesc}>
-                    <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat                    </h3>
+                    <Typography align="center" variant="h3">
+                        Ezekkel a finom italokkal várunk!
+                    </Typography>
                 </div>
                 <div style={classes.drinkListContainer}>
                     {props.drinks
                         .filter(drink => drink.categoryId === activeCategory.id)
                         .map(drink => {
                             return (
-                                <div style={classes.drinkContainer}>
-                                    <h2 style={classes.drinkTitle}>
-                                        {drink.title}
-                                    </h2>
-                                    <h3 style={classes.drinkDescription}>
-                                        {drink.description}
-                                    </h3>
-                                    <h3 style={classes.price}>
-                                        {drink.price}
-                                    </h3>
-                                </div>
+                                <React.Fragment key={drink.id}>
+                                    <div key={drink.id} style={classes.drinkContainer}>
+                                        <Typography variant="h3" style={{ wordWrap: 'break-word' }}>
+                                            {drink.title}
+                                        </Typography>
+                                        <Typography variant="h4">
+                                            {drink.description}
+                                        </Typography>
+                                        <Typography variant="h4">
+                                            {drink.price}
+                                        </Typography>
+                                    </div>
+                                </React.Fragment>
                             )
                         })}
                 </div>
