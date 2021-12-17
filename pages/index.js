@@ -27,7 +27,8 @@ export default function Home({ video, introduction, cards, quotePart, photos }) 
       marginTop: "8%",
     },
     photoContainer: {
-      padding: 0
+      padding: 0,
+      maxWidth: "100%"
     }
   };
 
