@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { getDrinkData } from '../util/localDataReader'
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-
+import { DrinkData } from '../types/dataTypes'
 
 
 export async function getStaticProps() {
@@ -15,7 +15,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function DrinkList(props) {
+export default function DrinkList({categories, drinks}:DrinkData) {
 
     const classes = {
         categoryButton: {
@@ -39,22 +39,21 @@ export default function DrinkList(props) {
             margin:"auto",
         },
         drinkContainer: {
-            textAlign: "center",
+            alignText: "center",
             marginTop: "5rem"
         }
     };
 
     const [activeCategory, setActiveCategory] = React.useState({ id: 1 });
 
-    props.drinks.forEach((x, i) => x.id = i);
     return (
-        <Layout title="Itallap">
+        <Layout title="Itallap" marginTopDisabled={false}>
             <Typography variant="h1" align="center">
                 ITALLAP
             </Typography>
             <Container fixed>
                 <Grid container justifyContent="center">
-                    {props.categories.map(category => {
+                    {categories.map(category => {
                         const active = category.id == activeCategory.id
                         return (
                             <Grid item md={2} sm={12} xs={12} style={{ marginBottom: 10, marginLeft: 20, marginRight: 20 }}>
@@ -73,7 +72,7 @@ export default function DrinkList(props) {
                     Ezekkel a finom italokkal várunk!
                 </Typography>
                 <div style={classes.drinkListContainer}>
-                    {props.drinks
+                    {drinks
                         .filter(drink => drink.categoryId === activeCategory.id)
                         .map(drink => {
                             return (

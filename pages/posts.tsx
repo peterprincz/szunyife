@@ -7,15 +7,16 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { getPosts } from '../util/localDataReader'
+import { PostsData } from '../types/dataTypes';
 
 export async function getStaticProps() {
 
     return {
-        props: { posts: getPosts() }
+        props: getPosts()
     }
 }
 
-export default function Posts(props) {
+export default function Posts({posts}:PostsData) {
 
     const classes = {
         postMedia: {
@@ -35,28 +36,27 @@ export default function Posts(props) {
     }
 
     return (
-        <Layout title="Hírek">
+        <Layout marginTopDisabled={false} title="Hírek">
             <Container fixed>
                 <Typography variant="h1" align="center">
                     HÍREK
                 </Typography>
                 <Grid container justifyContent="center">
-                    {props.posts.map(post => {
+                    {posts.map(post => {
                         return (
                             <Grid xs={12} item key={post.id} style={{ marginBottom: 50}}>
                                 <Card style={{ height: "100%" }}>
                                     <CardMedia
                                         style={classes.postMedia}
                                         image={post.image.src}
-                                        alt="post media"
                                     />
-                                    <CardContent style={classes.cardContent}>
+                                    <CardContent>
                                         <div style={classes.postHeader}>
                                             <Typography align="center" variant="h6" style={{ width: "100%" }}>
                                                 {post.title}
                                             </Typography>
                                         </div>
-                                        <div style={classes.postBody}>
+                                        <div>
                                             <Typography variant="body1">
                                                 {post.body}
                                             </Typography>

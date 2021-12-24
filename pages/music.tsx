@@ -1,13 +1,9 @@
 import React from 'react';
-
-
 import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-
 import { useEffect } from 'react'
 import io from 'socket.io-client'
-import Layout, { siteTitle } from '../components/layout'
-
+import Layout from '../components/layout'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -20,6 +16,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
 import { TextField } from '@material-ui/core';
 import { getConf } from '../util/localDataReader'
+import { SocketEventType } from '../types/dataTypes';
 
 export async function getStaticProps() {
 
@@ -30,22 +27,12 @@ export async function getStaticProps() {
     }
 }
 
-const eventTypes = [
-    "CONNECTION",
-    "SONG_REQUEST",
-    "SONG_ACCEPTED",
-    "CHANGE_VOLUME",
-    "SUCCESSFULL_OPERATION",
-    "ERROR",
-    "SPEECH"
-]
-
 class Event {
 
+    type:SocketEventType;
+    data:any;
+
     constructor(type, data) {
-        if (!eventTypes.includes(type)) {
-            throw new Error("Unkown event type:" + type);
-        }
         this.type = type;
         this.data = data;
     }
@@ -111,7 +98,7 @@ export default function MusicClient(props) {
         })
         getPlayList();
         setSocket(newSocket);
-        return () => newSocket.close();
+        return () => {newSocket.close()};
     }, [setSocket])
 
     const [song, setSong] = React.useState({
@@ -211,7 +198,7 @@ export default function MusicClient(props) {
     }
 
     return (
-        <Layout title="zenegép">
+        <Layout title="zenegép" marginTopDisabled={true}>
             <div style={classes.container}>
                 <Card style={classes.card}>
                     <CardActionArea>

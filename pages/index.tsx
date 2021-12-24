@@ -8,18 +8,21 @@ import BackgroundVideo from '../components/backgroundVideo';
 import Carousel from '../components/carousel';
 import { getIndexData } from '../util/localDataReader'
 import Grid from '@material-ui/core/Grid';
+import { GetStaticProps } from 'next';
+import { IndexData } from '../types/dataTypes';
 
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async(context) => {
 
   return {
     props: getIndexData()
   }
 }
 
-export default function Home({ video, introduction, cards, quotePart, photos }) {
+export default function Home({ video, introduction, cards, quotePart, photos }:IndexData) {
 
-  const classes = {
+
+  const classes: any = {
     titleContainer: {
       fontFamily: "Raleway,sans-serif"
     },

@@ -8,8 +8,7 @@
         "title": "A tökéletes kocsma",
         "subTitle": "Király zenével és remek hangulatával a legjobb hely a szorakozáshoz!"
     },
-    "cards": [
-        {
+    "cards": [{
             "id": 1,
             "image": "https://i.imgur.com/ZqdueGr.jpg",
             "title": "Sörpong",
@@ -33,8 +32,7 @@
     ],
     "quotePart": {
         "text": "Vendégeink mondták",
-        "quotes": [
-            {
+        "quotes": [{
                 "id": 1,
                 "text": "Mindig ide járok ha szórakozni vágyok!",
                 "author": "Kocka"
@@ -51,8 +49,7 @@
             }
         ]
     },
-    "photos": [
-        {
+    "photos": [{
             "src": "https://i.imgur.com/2mGGCBa.jpg"
         },
         {

@@ -1,9 +1,10 @@
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import React from 'react';
 import { getAlbums } from '../util/localDataReader'
 import Album from '../components/album'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import { GalleryData } from '../types/dataTypes';
 
 
 
@@ -14,7 +15,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function Gallery(props) {
+export default function Gallery({albums}:GalleryData) {
     const classes = {
         container: {
             display: "flex",
@@ -42,16 +43,16 @@ export default function Gallery(props) {
     });
 
 
-    props.albums.forEach((album, i) => album.id = i);
+    albums.forEach((album, i) => album.id = i);
 
     return (
-        <Layout title="Galléria">
+        <Layout title="Galléria" marginTopDisabled={false}>
             <div>
                 <Typography variant="h1" align="center" gutterBottom>
                     GALLÉRIA
                 </Typography>
                 <Grid container justifyContent="center" spacing={8}>
-                    {props.albums.map(album => {
+                    {albums.map(album => {
                         return (
                             <Grid style={classes.albumContainer} key={album.id}>
                                 <Album albumTitle={album.title} albumDesc={album.desc} previewPhoto={album.photos[0]} photos={album.photos} />

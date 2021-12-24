@@ -1,28 +1,26 @@
 {
-    "categories": [
+    "categories": [{
+            "id": 1,
+            "title": "Csapolt sörök"
+        },
         {
-        "id": 1,
-        "title": "Csapolt sörök"
-       },
-       {
-        "id": 2,
-        "title": "Dobozos sörök"
-       },
-       {
-        "id": 3,
-        "title": "Borok"
-       },
-       {
-        "id": 4,
-        "title": "Rövid italok"
-       },
-       {
-        "id": 5,
-        "title": "Üditők"
-       }
+            "id": 2,
+            "title": "Dobozos sörök"
+        },
+        {
+            "id": 3,
+            "title": "Borok"
+        },
+        {
+            "id": 4,
+            "title": "Rövid italok"
+        },
+        {
+            "id": 5,
+            "title": "Üditők"
+        }
     ],
-    "drinks": [
-        {
+    "drinks": [{
             "title": "Stella Artois",
             "description": "Világos sör",
             "price": "370 Ft",

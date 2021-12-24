@@ -12,8 +12,9 @@ import Divider from '@material-ui/core/Divider';
 
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { HeaderProperties } from '../types/dataTypes';
 
-export default function Header({title}) {
+export default function Header({title, drawerItems, menus}:HeaderProperties) {
     const classes = {
         root: {
             flexGrow: 1,
@@ -34,52 +35,6 @@ export default function Header({title}) {
     const [state, setState] = React.useState({
         drawerClosed: true,
     });
-
-    const drawerItems = [
-        {
-            id: 1, title: "Cím", items: [
-                "Vác, Sziréna köz 8",
-            ]
-        },
-        {
-            id: 2, title: "Elérhetőség", items: [
-                "(06) 30 123 4567",
-                "szunyog@email.com",
-            ]
-        },
-        {
-            id: 3, title: "Nyitva tartás", items: [
-                "Hétfő 16:00 - 01:00",
-                "Kedd 16:00 - 01:00",
-                "Szerda 16:00 - 01:00",
-                "Csütörtök 16:00 - 01:00",
-                "Péntek 16:00 - 04:00",
-                "Szombat 16:00 - 04:00",
-            ]
-        },
-        {
-            id:4, title: "Zenegép", items:[], url: "/music"
-        }
-    ]
-
-    const menus = [
-        {
-            title: "Kezdőlap",
-            url: "/"
-        },
-        {
-            title: "Itallap",
-            url: "/drinklist"
-        },
-        {
-            title: "Hírek",
-            url: "/posts"
-        },
-        {
-            title: "Galléria",
-            url: "/gallery"
-        }
-    ]
 
     let active = 1;
     switch(title){

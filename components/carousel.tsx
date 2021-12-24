@@ -2,9 +2,10 @@ import React, { useEffect, useCallback, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from 'next/image'
+import { CarouselProperties } from "../types/dataTypes";
 
 
-export default function Carousel({ photos , options = { loop: false } }) {
+export default function Carousel({ photos , options = { loop: false } }:CarouselProperties) {
     const autoplay = useRef(
         Autoplay(
             { delay: 3000, stopOnInteraction: false },
@@ -45,10 +46,8 @@ export default function Carousel({ photos , options = { loop: false } }) {
             position: "relative",
             overflow: "hidden",
             height: 500
-        }
+        }  as React.CSSProperties
     }
-
-    photos.forEach((x, i) => x.id = i);
 
     return (
         <div>

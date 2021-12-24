@@ -5,9 +5,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Typography from '@material-ui/core/Typography';
+import { AlbumProperties } from '../types/dataTypes';
 
 
-export default function Album({ albumTitle, albumDesc, previewPhoto, photos }) {
+export default function Album({ albumTitle, albumDesc, previewPhoto, photos }:AlbumProperties) {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -62,8 +63,7 @@ export default function Album({ albumTitle, albumDesc, previewPhoto, photos }) {
                             views={photos.map(x => ({
                                 ...x,
                                 key: x.src,
-                                srcset: x.srcSet,
-                                caption: x.title
+                                source:x.src
                             }))}
                         />
                     </Modal>
