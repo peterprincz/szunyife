@@ -6,7 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { CardImageProperties } from '../types/dataTypes';
 
-export default function CardImage({ className, title, image, textTitle, text }:CardImageProperties) {
+export default function CardImage({title, image, textTitle, text }:CardImageProperties) {
 
     const classes = {
         card: {
@@ -19,7 +19,7 @@ export default function CardImage({ className, title, image, textTitle, text }:C
         }
     };
     return (
-        <Card className={className} style={classes.card}>
+        <Card style={classes.card}>
             <CardActionArea>
                 <CardMedia
                     style={classes.cardImage}

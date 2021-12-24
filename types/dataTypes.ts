@@ -85,7 +85,7 @@ export type BackgroundVideoProperties = {
 }
 
 export type CardImageProperties = {
-    className: string,
+    children?: never[],
     title: string,
     image: string,
     textTitle: string,

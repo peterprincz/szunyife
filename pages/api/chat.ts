@@ -1,5 +1,5 @@
 import { NextApiRequest } from "next";
-import { SocketChannels, SocketEvent } from "../../types/dataTypes";
+import { SocketChannels, SocketEventType } from "../../types/dataTypes";
 import { NextApiResponseServerIO } from "../../types/next";
 import { Server as SocketIOServer } from "socket.io";
 
@@ -18,11 +18,11 @@ export default (req: NextApiRequest, res: NextApiResponseServerIO) => {
   res.end();
 }
 
-const broadCastMessage = (server: SocketIOServer, event: SocketEvent, channels: SocketChannels[]) => {
+const broadCastMessage = (server: SocketIOServer, event: SocketEventType, channels: SocketChannels[]) => {
   channels.forEach(channel => server.emit(channel, event));
 }
 
 
 const hearthBeat = (server: SocketIOServer) => {
-  broadCastMessage(server, SocketEvent.HEARTHBEAT, [SocketChannels.CLIENTS, SocketChannels.MACHINES]);
+  broadCastMessage(server, SocketEventType.HEARTHBEAT, [SocketChannels.CLIENTS, SocketChannels.MACHINES]);
 }

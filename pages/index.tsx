@@ -83,7 +83,7 @@ export default function Home({ video, introduction, cards, quotePart, photos }:I
           {quotePart.quotes.map(quote => {
             return (
               <Grid  key={quote.id}  item md={4} sm={12} style={{width:"100%", padding: 20}}>
-                <Quote text={quote.text} author={quote.author} />
+                <Quote id={quote.id} text={quote.text} author={quote.author} />
               </Grid>
             )
           })}
