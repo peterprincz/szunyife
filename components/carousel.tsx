@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from 'next/image'
-import { CarouselProperties } from "../types/dataTypes";
+import { CarouselProperties } from "types/data-types";
 
 
 export default function Carousel({ photos , options = { loop: false } }:CarouselProperties) {
@@ -14,18 +14,6 @@ export default function Carousel({ photos , options = { loop: false } }:Carousel
     );
 
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
-
-    const scrollNext = useCallback(() => {
-        if (!emblaApi) return;
-        emblaApi.scrollNext();
-        autoplay.current.reset();
-    }, [emblaApi]);
-
-    const scrollPrev = useCallback(() => {
-        if (!emblaApi) return;
-        emblaApi.scrollPrev();
-        autoplay.current.reset();
-    }, [emblaApi]);
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return;

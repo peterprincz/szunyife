@@ -1,15 +1,16 @@
-import Layout from '../components/layout'
+
+import Layout from 'components/layout'
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
-import Quote from '../components/quote'
-import CardImage from '../components/cardImage';
-import BackgroundVideo from '../components/backgroundVideo';
-import Carousel from '../components/carousel';
-import { getIndexData } from '../util/localDataReader'
 import Grid from '@material-ui/core/Grid';
+import React from 'react';
 import { GetStaticProps } from 'next';
-import { IndexData } from '../types/dataTypes';
+import Quote from 'components/quote'
+import CardImage from 'components/cardImage';
+import BackgroundVideo from 'components/backgroundVideo';
+import Carousel from 'components/carousel';
+import { getIndexData } from 'lib/local-data-reader'
+import { IndexData } from 'types/data-types';
 
 
 export const getStaticProps: GetStaticProps = async(context) => {

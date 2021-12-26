@@ -3,7 +3,7 @@ import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { useEffect } from 'react'
 import io from 'socket.io-client'
-import Layout from '../components/layout'
+import Layout from 'components/layout';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -15,8 +15,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
 import { TextField } from '@material-ui/core';
-import { getConf } from '../util/localDataReader'
-import { SocketEventType } from '../types/dataTypes';
+import { getConf } from 'lib/local-data-reader';
+import { SocketEventType } from 'types/data-types';
 
 export async function getStaticProps() {
 

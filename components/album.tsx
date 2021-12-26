@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Typography from '@material-ui/core/Typography';
-import { AlbumProperties } from '../types/dataTypes';
+import { AlbumProperties } from 'types/data-types';
 
 
 export default function Album({ albumTitle, albumDesc, previewPhoto, photos }:AlbumProperties) {

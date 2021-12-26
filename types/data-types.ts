@@ -60,6 +60,34 @@ export type GalleryData = {
     }[]
 }
 
+export type FeedData = {
+    feedPosts:FeedPost[]
+}
+
+export type FeedPost = {
+    createdAt: Date,
+    authorId: number,
+    images?:Photo[],
+    content:string,
+    comments: FeedComment[],
+    likeUserIds:number[]
+}
+
+export type FeedComment = {
+    createdAt: Date,
+    authorId: number,
+    image:Photo,
+    content:string,
+}
+
+export type User = {
+    id:number,
+    username:string
+    password:string
+    name:string,
+    reqDate: Date
+}
+
 export type PostsData = {
     posts:
     {

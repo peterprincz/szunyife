@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './video.module.css'
-import { BackgroundVideoProperties } from '../types/dataTypes';
+import { BackgroundVideoProperties } from 'types/data-types';
 
 
 const BackgroundVideo = ({ videoSource, children, blur }:BackgroundVideoProperties) => {

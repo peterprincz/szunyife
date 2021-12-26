@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { DrinkData, GalleryData, IndexData, PostsData } from '../types/dataTypes';
+import { DrinkData, GalleryData, IndexData, PostsData } from 'types/data-types';
 
 const dataDirectory:string = path.join(process.cwd(), "data")
 

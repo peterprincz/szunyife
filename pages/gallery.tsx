@@ -1,10 +1,10 @@
-import Layout from '../components/layout'
+import Layout from 'components/layout'
 import React from 'react';
-import { getAlbums } from '../util/localDataReader'
-import Album from '../components/album'
+import { getAlbums } from 'lib/local-data-reader'
+import Album from 'components/album'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { GalleryData } from '../types/dataTypes';
+import { GalleryData } from 'types/data-types';
 
 
 

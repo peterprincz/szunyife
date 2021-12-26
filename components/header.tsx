@@ -12,7 +12,7 @@ import Divider from '@material-ui/core/Divider';
 
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { HeaderProperties } from '../types/dataTypes';
+import { HeaderProperties } from 'types/data-types';
 
 export default function Header({title, drawerItems, menus}:HeaderProperties) {
     const classes = {

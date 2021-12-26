@@ -1,13 +1,13 @@
 import React from 'react';
-import Layout from "../components/layout";
+import Layout from "components/layout";
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { getPosts } from '../util/localDataReader'
-import { PostsData } from '../types/dataTypes';
+import { getPosts } from 'lib/local-data-reader';
+import { PostsData } from 'types/data-types';
 
 export async function getStaticProps() {
 

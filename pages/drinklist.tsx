@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from "../components/layout";
+import Layout from "components/layout";
 import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import { getDrinkData } from '../util/localDataReader'
+import { getDrinkData } from 'lib/local-data-reader'
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import { DrinkData } from '../types/dataTypes'
+import { DrinkData } from 'types/data-types'
 
 
 export async function getStaticProps() {

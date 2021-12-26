@@ -4,7 +4,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { CardImageProperties } from '../types/dataTypes';
+import { CardImageProperties } from 'types/data-types';
 
 export default function CardImage({title, image, textTitle, text }:CardImageProperties) {
 

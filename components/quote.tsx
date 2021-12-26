@@ -1,6 +1,6 @@
 import styles from './quote.module.css'
 import Typography from '@material-ui/core/Typography';
-import { Quote } from '../types/dataTypes';
+import { Quote } from 'types/data-types';
 
 
 export default function Qoute({text, author}:Quote) {
