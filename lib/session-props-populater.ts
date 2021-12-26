@@ -17,11 +17,6 @@ export default async function defaultSessionPropsPopulater<P extends { [key: str
                 destination: '/login',
                 permanent: false
             }
-        } else {
-            ssrProps.redirect = {
-                destination: '/feed',
-                permanent: false
-            }
         }
         return ssrProps;
     }
