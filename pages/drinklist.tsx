@@ -39,7 +39,7 @@ export default function DrinkList({categories, drinks}:DrinkData) {
             margin:"auto",
         },
         drinkContainer: {
-            alignText: "center",
+            textAlign: "center",
             marginTop: "5rem"
         }
     };
